@@ -8,3 +8,26 @@ Classifying Consumer Finance Complaints into one of eleven product categories, T
 <b>Predictors/features/independent = 'consumer_complaint_narrative'</b> 
 
 <b>Response/target/dependent variable = 'product' </b>
+
+## Dataset
+The dataset consists of the following,
+| Field Name |  Data Type |
+| ----------:|-----------:|
+|complaint_id	 | text|
+| date_received	| Date|
+|product |text |
+|sub_product	 | text|
+|issue	 |text |
+|sub_issue	 |text |
+|sub_issue	 |text |
+| company_public_response	|text |
+|company	 |text |
+|state	 |text |
+|zip_code |text |
+|tags	 |text |
+|consumer_consent_provided	 |text |
+|submitted_via	 |text |
+|date_sent	 |Date |
+|company_response_to_consumer	 |text |
+|timely_response |text |
+|consumer_disputed	 |text |

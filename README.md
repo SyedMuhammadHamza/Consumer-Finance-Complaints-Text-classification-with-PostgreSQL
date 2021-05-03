@@ -5,5 +5,6 @@ Recently I came across [The Consumer Complaint Database](https://catalog.data.go
 ## problem Statement
 Classifying Consumer Finance Complaints into one of eleven product categories, The problem is a Text classification, also known as text tagging or text categorization. Text classifiers can automatically analyze text and then assign a set of pre-defined tags or categories based on its content. In this problem, I have taken 'consumer_complaint_narrative'  as “text” and to classify each consumer_complaint_narrative / “text”  into one of eleven pre-defined categories of product.
 
-<b>Predictors/features/independent = 'consumer_complaint_narrative'</b>
+<b>Predictors/features/independent = 'consumer_complaint_narrative'</b> 
+
 <b>Response/target/dependent variable = 'product' </b>

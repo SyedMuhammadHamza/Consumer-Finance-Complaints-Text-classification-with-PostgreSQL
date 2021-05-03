@@ -46,16 +46,16 @@ that's the standard that says if you write to through this protocol this standar
 As mentioned earlier for this classification I'm going to use  'consumer_complaint_narrative'  as predictors/features/independent variables and 'product' as Response/target/dependent variable which has a total of eleven classes/categories/labels therefore I'm going to create a total of eleven tables in my Database
 
 following are the tables being created in the database
-    - Mortgage'
-    - CreditReporting'
-    - StudentLoan
-    - DebtCollection 5CreditCard
-    - BankAccountORservice
-    - ConsumerLoan         
-    - MoneyTransfers
-    - PaydayLoan
-    - PrepaidCard
-    - therFinancialService
+- Mortgage'
+- CreditReporting'
+- StudentLoan
+- DebtCollection 5CreditCard
+- BankAccountORservice
+- ConsumerLoan         
+- MoneyTransfers
+- PaydayLoan
+- PrepaidCard
+- therFinancialService
 ### Loaded Data into tables from data frames 
 After creating my tables now I've to load data from data frames into tables 
 ### Using views

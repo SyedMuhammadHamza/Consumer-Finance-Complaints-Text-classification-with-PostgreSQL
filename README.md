@@ -64,3 +64,67 @@ I have to deal with the missing values in my features. but in this problem of te
 ### Union
 Finally taking UNION of eleven views and created a new view with the name "with_complaints" and loaded it into a pandas data frame
 ![ERD](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/DBMS_ER_diagram_(UMLnotation)(1).jpeg)
+
+## Exploratory Data Analysis using PostgreSQL
+EDA by using SQL queries can be more flexible instead of doing it on Pandas Dataframes but be cautious it can act as a double-edged since it's not very efficient and faster nevertheless the flexible queries you can pose for EDA is phenomenal 
+
+### most notorious Credit card companies by number of complaints
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/EDA.png)
+
+### Class Imbalance check
+To do classification, I need to know if my data is suffering from the Class Imbalance Problem where class distributions are highly imbalanced that will be reflected by poor precision. recall and F1 score hence now I'm gonna do a Class Imbalance check
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/PIE.jpg)
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/IMBALANCE.png)
+
+### Visualizing the TF-IDF weighted Vectors
+Visualizing embeddings give us a better understanding of how successful our embeddings are going to work as classifiers by separating different classes from higher dimensional feature space to some lower two-dimensional feature space but this requires dimensionality reduction before we can visualize it.
+The various methods used for dimensionality reduction include:
+* Principal Component Analysis (PCA)
+* Linear Discriminant Analysis (LDA)
+* Generalized Discriminant Analysis (GDA)
+* Singular Value Decomposition (SVD) 
+
+
+For this problem, we've used Truncated-SVD slightly modified version of SVD the difference between Truncated-SVD and PCA is that truncated-SVD doesn't center the data before computing values First, first, we've converted our higher dimensional TF-IDF Embedding/Bag of words Embedding into two-dimensional using Truncated-SVD then visualize our 2D embeddings using a scatter plot we've done it for each class so we can understand how each class separates itself from others.
+
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/EMBEDDING.png)
+
+## Model Building and Evaluation
+
+### OneVsRest Support Vector Machine Classifier
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/REPORT1.jpg)
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/SCORE1.png)
+
+### RandomForestClassifier
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/REPORT2.jpg)
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/SCORE2.png)
+
+
+### GradientBoostingClassifier
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/REPORT3.jpg)
+![pic](https://github.com/SyedMuhammadHamza/Consumer-Finance-Complaints-Text-classification-with-PostgreSQL/blob/main/Data/SCORE3.png)
+
+
+## Model performance
+| Algorithm        | Accuracy           |  Recall |  Precision |  F1  | 
+| ---------------- |:------------------:| -------:|-----------:|-----:|
+|OneVsRest Support Vector Machine Classifier|  85% | 0.85| 0.86 | 0.85|
+|RandomForestClassifier| 82% |0.82 | 0.82| 0.81|
+|GradientBoostingClassifier|  83% | 0.83 |0.83 | 0.82|
+
+
+## Conclusion
+The classification reports summarize the result and I concluded that The performance of my OneVsRest Support Vector Machine Classifier outperformed both ensembling methods namely RandomForestClassifier and GradientBoostingClassifier
+
+
+## Technologies 
+* Python
+* Scikit-learn
+* Matplotlib & Seaborn for data visualization
+* NLTK
+* TensorFlow
+* SMOTE
+* Sklearn for model building
+
+©SyedMuhammadHamza Licensed under [MIT License]()
+
